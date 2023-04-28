@@ -1,16 +1,23 @@
 import Link from "next/link";
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
 
-export default function Featured() {
+export default function Featured({featuredProduct}) {
+    const {addProducts} = useContext(CartContext)
+    const addFeaturedToCart = () =>{
+        addProducts(featuredProduct._id) 
+    }
+
     return (
         <>
             <div>
-                <h1>Featured Product</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <button>Learn More</button>
-                {/* <Link href={'/products/'+product._id}><button>Buy</button></Link> */}
+                <h1>iPhone 14 Pro</h1>
+                <h3>Pro. Beyond.</h3>
+                <Link href={'/products/'+featuredProduct._id}><button>Learn More</button></Link>
+                <button onClick={addFeaturedToCart}>Buy</button>
             </div>
             <div>
-                <img src=""/>
+                <img id="featured-img" src="https://hmjk99-next-ecommerce.s3.amazonaws.com/1682641010093.png"/>
             </div>
         </>
         
