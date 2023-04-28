@@ -4,7 +4,7 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 
 export default function Cart() {
-    const {cartProducts, addProducts, removeProducts} = useContext(CartContext)
+    const {cartProducts, setCartProducts, addProducts, removeProducts, clearCart} = useContext(CartContext)
     const [products, setProducts] = useState([])
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -12,6 +12,7 @@ export default function Cart() {
     const [city, setCity] = useState('')
     const [state, setState] = useState('')
     const [postal, setPostal] = useState('')
+    const [isSuccess, setIsSuccess] = useState(false)
 
     const moreProduct = (id) => {
         addProducts(id)
@@ -33,6 +34,7 @@ export default function Cart() {
         const price = products.find(p => p._id === productId)?.price || 0
         total += price
     }
+
     useEffect(()=> {
         if (cartProducts.length > 0){
             axios.post('/api/cart', {ids:cartProducts}).then(response => {
@@ -40,10 +42,22 @@ export default function Cart() {
             })
         } else {
             setProducts([])
+            
         }
     }, [cartProducts])
 
-    if (window.location.href.includes('success')){
+    useEffect(()=> {
+        if(typeof window === 'undefined'){
+            return
+        }
+        if (window?.location.href.includes('success')){
+            clearCart()
+            setIsSuccess(true)
+        }
+    }, [])
+
+
+    if (isSuccess){
         return (
             <>
                 <Header/>

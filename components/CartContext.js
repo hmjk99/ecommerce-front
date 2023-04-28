@@ -25,13 +25,16 @@ export function CartContextProvider({children}) {
         setCartProducts(prev => {
             const position = prev.indexOf(productId)
             if (position !== -1) {
-                return prev.filter((value,index) => index !== position)
+                return prev.filter((value, index) => index !== position)
             }
             return prev
         })
     }
+    const clearCart = () => {
+        setCartProducts([])
+    }
 
     return (
-        <CartContext.Provider value={{cartProducts, setCartProducts, addProducts, removeProducts}}>{children}</CartContext.Provider>
+        <CartContext.Provider value={{cartProducts, setCartProducts, addProducts, removeProducts, clearCart}}>{children}</CartContext.Provider>
     )
 }

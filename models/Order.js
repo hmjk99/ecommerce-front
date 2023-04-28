@@ -10,6 +10,8 @@ const OrderSchema = new Schema({
     state:String,
     postal:String,
     paid:Boolean,
+}, {
+    timestamps: true,
 })
 
 export const Order = models?.Order || model('Order', OrderSchema)
