@@ -17,7 +17,7 @@ export default function Featured({featuredProduct}) {
                 <button onClick={addFeaturedToCart}>Buy</button>
             </div>
             <div>
-                <img id="featured-img" src="https://hmjk99-next-ecommerce.s3.amazonaws.com/1682641010093.png"/>
+                <img id="img" src="https://hmjk99-next-ecommerce.s3.amazonaws.com/1682641010093.png"/>
             </div>
         </>
         

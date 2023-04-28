@@ -16,7 +16,7 @@ export default function NewProducts({newProducts}) {
                         <button onClick={()=> addProducts(product._id)}>Buy</button>
                     </div>
                     <div>
-                        <img id="featured-img" src={product.images[0]}/>
+                        <img id="img" src={product.images[0]}/>
                     </div>
                 </div>
             ))}
