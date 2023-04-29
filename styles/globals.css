@@ -19,3 +19,32 @@
   padding: 2px;
   cursor: pointer;
 }
+header{
+  background-color: rgb(79, 79, 79);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 100%;
+  position:fixed;
+  top: 0;
+  left: 0;
+}
+.nav-link{
+  color: white;
+  margin: 0 3.3rem;
+}
+a{
+  text-decoration: none;
+}
+#container{
+  margin-top: 4rem;
+}
+#featured{
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  align-items: center;
+  width: 100%;
+}

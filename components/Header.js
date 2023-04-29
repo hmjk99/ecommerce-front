@@ -6,14 +6,14 @@ export default function Header () {
     const {cartProducts} = useContext(CartContext)
     return (
         <header>
-            <Link href={'/'}>Pineapple</Link>
             <nav>
-                <Link  href={'/'}>Home</Link>
-                <Link  href={'/products'}>All Products</Link>
-                <Link  href={'/mac'}>Mac</Link>
-                <Link  href={'/iphone'}>iPhone</Link>
-                <Link  href={'/airpods'}>AirPods</Link>
-                <Link  href={'/cart'}>Cart ({cartProducts.length})</Link>
+                <Link className="nav-link" href={'/'}>Pineapple</Link>
+                <Link className="nav-link" href={'/'}>Home</Link>
+                <Link className="nav-link" href={'/products'}>All Products</Link>
+                <Link className="nav-link" href={'/mac'}>Mac</Link>
+                <Link className="nav-link" href={'/iphone'}>iPhone</Link>
+                <Link className="nav-link" href={'/airpods'}>AirPods</Link>
+                <Link className="nav-link" href={'/cart'}>Cart({cartProducts.length})</Link>
             </nav>
         </header>
     )

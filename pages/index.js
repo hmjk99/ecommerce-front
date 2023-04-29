@@ -6,11 +6,13 @@ import { Product } from "@/models/Products";
 
 export default function Home({featuredProduct, newProducts}) {
   return(
-    <div>
+    <>
       <Header/>
-      <Featured featuredProduct={featuredProduct}/>
-      <NewProducts newProducts={newProducts}/>
-    </div>
+      <div id="container">
+        <Featured featuredProduct={featuredProduct}/>
+        <NewProducts newProducts={newProducts}/>
+      </div>
+    </>
   )
 }
 
