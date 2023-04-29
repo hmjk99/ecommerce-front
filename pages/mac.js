@@ -11,7 +11,7 @@ export default function Mac({products}) {
     return (
         <>
         <Header/>
-        {products?.length > 0 && products.map(product => (
+        {products.map(product => (
                 <div>
                     <div>
                         <h2>{product.title}</h2>
