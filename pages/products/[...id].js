@@ -24,6 +24,13 @@ export default function SingleProduct({product}) {
             </div>
             <div>
                 <p>{product.description}</p>
+                <ul>
+                    {Object.entries(product.properties).map(([key, value]) => (
+                    <li key={key}>
+                        {key}: {value}
+                    </li>
+                    ))}
+                </ul>
                 <h5>${product.price}</h5>
                 <button onClick={()=> addProducts(product._id)}>Buy</button>
             </div>

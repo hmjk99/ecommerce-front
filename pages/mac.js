@@ -12,17 +12,17 @@ export default function Mac({products}) {
         <>
         <Header/>
         {products.map(product => (
+            <div>
                 <div>
-                    <div>
-                        <h2>{product.title}</h2>
-                        <h5>${product.price}</h5>
-                        <Link href={'/products/'+product._id}><button>Learn More</button></Link>
-                        <button onClick={()=> addProducts(product._id)}>Buy</button>
-                    </div>
-                    <div>
-                        <img id="img" src={product.images[0]}/>
-                    </div>
+                    <h2>{product.title}</h2>
+                    <h5>${product.price}</h5>
+                    <Link href={'/products/'+product._id}><button>Learn More</button></Link>
+                    <button onClick={()=> addProducts(product._id)}>Buy</button>
                 </div>
+                <div>
+                    <img id="img" src={product.images[0]}/>
+                </div>
+            </div>
         ))}
         </>
     )
