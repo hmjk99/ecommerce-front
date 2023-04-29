@@ -3,3 +3,19 @@
   height: 20rem;
   object-fit: contain;
 }
+.gallery-img{
+  max-width: 100%;
+  max-height: 100%
+}
+.gallery{
+  display: flex;
+  gap: 10px;
+  flex-grow: 0;
+  margin: 10px
+}
+.gallery-button{
+  border: 1px solid gray;
+  height: 40px;
+  padding: 2px;
+  cursor: pointer;
+}
