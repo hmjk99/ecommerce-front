@@ -61,8 +61,10 @@ export default function Cart() {
         return (
             <>
                 <Header/>
-                <h1>Thanks for your order!</h1>
-                <p>We will email you with your order details.</p>
+                <div id="order-confirm">
+                    <h1>Thanks for your order!</h1>
+                    <p>We will email you with your order details.</p>
+                </div>
             </>
         )
     }
@@ -70,48 +72,71 @@ export default function Cart() {
     return (
         <>
             <Header />
-            <div>
+            <div id="cart">
+                <h2>Cart</h2>
                 {!cartProducts?.length && (
                     <h2>Your cart is empty</h2>
                 )}
-                {products?.length > 0 && (
-                <>
-                    <h2>Cart</h2>
-                    {products.map(product => (
+                <div id="cart-content">
+                    {products?.length > 0 && (
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {products.map(product => (
+                            <tr key={product._id}>
+                                <td className="td-product">
+                                    <img className="cart-img" src={product.images[0]} alt=""/>
+                                    {product.title}
+                                </td>
+                                <td>
+                                    <button className="cart-button"
+                                    onClick={() => minusProduct(product._id)}>-</button>
+                                    {cartProducts.filter(id => id === product._id).length}
+                                    <button className="cart-button"
+                                    onClick={() => moreProduct(product._id)}>+</button>
+                                </td>
+                                <td>
+                                    ${cartProducts.filter(id => id === product._id).length * product.price}
+                                </td>
+                            </tr>
+                        ))}
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><h4>Total: ${total}</h4></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    )}
+                    <div id="order-input">
+                    {!!cartProducts?.length && 
                         <>
-                        <div>{product.title}</div>
-                        <button onClick={()=> minusProduct(product._id)}>-</button>
-                        <div>{cartProducts.filter(id => id === product._id).length}</div>
-                        <button onClick={()=> moreProduct(product._id)}>+</button>
-                        <div>${cartProducts.filter(id => id === product._id).length * product.price}</div>
+                            <h2>Order Information</h2>
+                            <input type="text" placeholder="Name" value={name} name="name" onChange={e => setName
+                            (e.target.value)}/>
+                            <input type="text" placeholder="Email" value={email} name="email" onChange={e => setEmail
+                            (e.target.value)}/>
+                            <input type="text" placeholder="Street Address" value={street} name="street" onChange={e => setStreet
+                            (e.target.value)}/>
+                            <input type="text" placeholder="City" value={city} name="city" onChange={e => setCity
+                            (e.target.value)}/>
+                            <input type="text" placeholder="State" value={state} name="state" onChange={e => setState
+                            (e.target.value)}/>
+                            <input type="text" placeholder="Postal Code" value={postal} name="postal" onChange={e => setPostal
+                            (e.target.value)}/>
+                            <button id="cart-submit" onClick={goToPayment}>Continue to Payment</button>
                         </>
-                    ))}
-                    <div>
-                        <h4>Total: ${total}</h4>
+                    }
                     </div>
-                </>
-                )}
+                </div>
             </div>
-            <div>
-                {!!cartProducts?.length && 
-                    <div>
-                        <h2>Order Information</h2>
-                        <input type="text" placeholder="Name" value={name} name="name" onChange={e => setName
-                        (e.target.value)}/>
-                        <input type="text" placeholder="Email" value={email} name="email" onChange={e => setEmail
-                        (e.target.value)}/>
-                        <input type="text" placeholder="Street Address" value={street} name="street" onChange={e => setStreet
-                        (e.target.value)}/>
-                        <input type="text" placeholder="City" value={city} name="city" onChange={e => setCity
-                        (e.target.value)}/>
-                        <input type="text" placeholder="State" value={state} name="state" onChange={e => setState
-                        (e.target.value)}/>
-                        <input type="text" placeholder="Postal Code" value={postal} name="postal" onChange={e => setPostal
-                        (e.target.value)}/>
-                        <button onClick={goToPayment}>Continue to Payment</button>
-                    </div>
-                }
-            </div>
+            
         </>
         
     )
