@@ -10,19 +10,23 @@ export default function Products({products}) {
 
     return (
         <>
-        <Header/>
-        <h1>All Products</h1>
-        <div>
-            {products.length > 0 && products.map(product=> (
-                <div>
-                    <h3>{product.title}</h3>
-                    <img id="img" src={product.images[0]}/>
-                    <h5>${product.price}</h5>
-                    <Link href={'/products/'+product._id}><button>Learn More</button></Link>
-                    <button onClick={()=> addProducts(product._id)}>Buy</button>
+            <Header/>
+            <div id="all-products-page">
+                <h1>All Products</h1>
+                <div id="all-products">
+                    {products.length > 0 && products.map(product=> (
+                        <div className="indv-product">
+                            <h2>{product.title}</h2>
+                            <img className="product-page-img" src={product.images[0]}/>
+                            <h4>${product.price}</h4>
+                            <div className="home-buttons products-button">
+                                <Link href={'/products/'+product._id}><button>Learn More &gt;</button></Link>
+                                <button onClick={()=> addProducts(product._id)}>Buy &gt;</button>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-            ))}
-        </div>
+            </div>
         </>
     )
 }

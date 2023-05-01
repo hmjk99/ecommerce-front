@@ -8,7 +8,7 @@ export default function Home({featuredProduct, airpodsMax, airpodsPro, macbook})
   return(
     <>
       <Header/>
-      <div id="container">
+      <div>
         <Featured featuredProduct={featuredProduct}/>
         <NewProducts airpodsMax={airpodsMax} airpodsPro={airpodsPro} macbook={macbook}/>
       </div>

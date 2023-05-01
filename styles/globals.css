@@ -35,13 +35,16 @@ header{
 a{
   text-decoration: none;
 }
-#container{
+#__next{
   margin-top: 4rem;
   width: 100%
 }
 body{
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
+}
+button{
+  padding:0;
 }
 /* ====================== featured page ===================== */
 .home{
@@ -108,4 +111,44 @@ h1{
   object-fit: cover;
   width: 31rem;
   height: 30rem;
+}
+/* ================================ all products ====================== */
+#all-products-page{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#all-products-page h1{
+  margin: 0
+}
+#all-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.indv-product{
+  width: 26rem;
+  height: 26rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid gray;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.product-page-img{
+  width: 18rem;
+  height: 15rem;
+  object-fit: contain;
+  border: 1px solid gray;
+  border-radius: 15px;
+}
+.products-button button{
+  background-color: rgb(49, 105, 211);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 20px;
 }
