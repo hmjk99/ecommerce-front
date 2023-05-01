@@ -115,9 +115,8 @@ export default function Cart() {
                         </tbody>
                     </table>
                     )}
-                    <div id="order-input">
                     {!!cartProducts?.length && 
-                        <>
+                        <div id="order-input">
                             <h2>Order Information</h2>
                             <input type="text" placeholder="Name" value={name} name="name" onChange={e => setName
                             (e.target.value)}/>
@@ -132,9 +131,8 @@ export default function Cart() {
                             <input type="text" placeholder="Postal Code" value={postal} name="postal" onChange={e => setPostal
                             (e.target.value)}/>
                             <button id="cart-submit" onClick={goToPayment}>Continue to Payment</button>
-                        </>
+                        </div>
                     }
-                    </div>
                 </div>
             </div>
             
