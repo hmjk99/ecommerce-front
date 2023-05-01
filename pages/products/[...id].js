@@ -13,11 +13,11 @@ export default function SingleProduct({product}) {
         <div className="show-page">
             <div className="show-left">
                 <h1>{product.title}</h1>
-                <img className="show-img" src={activeImage}/>
+                <img className="show-img" src={activeImage} alt=""/>
                 <div className="gallery">
                     {product.images.map(image => (
-                        <div onClick={()=> setActiveImage(image)} className="gallery-button">
-                            <img className="gallery-img" src={image}/>
+                        <div key={1} onClick={()=> setActiveImage(image)} className="gallery-button">
+                            <img className="gallery-img" src={image} alt=""/>
                         </div>
                     ))}
                 </div>

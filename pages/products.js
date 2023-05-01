@@ -15,9 +15,9 @@ export default function Products({products}) {
                 <h1>All Products</h1>
                 <div id="all-products">
                     {products.length > 0 && products.map(product=> (
-                        <div className="indv-product">
+                        <div key={product.title} className="indv-product">
                             <h2>{product.title}</h2>
-                            <img className="product-page-img" src={product.images[0]}/>
+                            <img className="product-page-img" src={product.images[0]} alt=""/>
                             <h4>${product.price}</h4>
                             <div className="home-buttons products-button">
                                 <Link href={'/products/'+product._id}><button>Learn More &gt;</button></Link>

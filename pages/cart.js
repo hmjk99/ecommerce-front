@@ -1,6 +1,7 @@
 import { CartContext } from "@/components/CartContext";
 import Header from "@/components/Header";
 import axios from "axios";
+import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
 
 export default function Cart() {
@@ -51,10 +52,10 @@ export default function Cart() {
             return
         }
         if (window?.location.href.includes('success')){
-            clearCart()
             setIsSuccess(true)
+            clearCart()
         }
-    }, [])
+    }, [clearCart])
 
 
     if (isSuccess){
