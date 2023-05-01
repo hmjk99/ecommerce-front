@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
 #img{
-  width: 30rem;
+  width: 40rem;
   height: 20rem;
-  object-fit: contain;
+  object-fit: cover;
+  margin: 0
 }
 .gallery-img{
   max-width: 100%;
@@ -33,12 +35,15 @@ header{
 .nav-link{
   color: white;
   margin: 0 3.3rem;
+  font-weight: 300;
+  font-size: 0.85rem;
 }
 a{
   text-decoration: none;
 }
 #container{
   margin-top: 4rem;
+  width: 100%
 }
 #featured{
   display: flex;
@@ -47,4 +52,32 @@ a{
   color: white;
   align-items: center;
   width: 100%;
+}
+body{
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+h1{
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 0
+}
+#featured-h3{
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+#featured-buttons{
+  margin-top: 1.2rem;
+}
+#featured-buttons button{
+  margin: 0 0.7rem;
+  border: none;
+  background: transparent;
+  color: rgb(74, 122, 225);
+  font-size: 1.2rem;
+}
+#featured-buttons button:hover{
+  text-decoration: underline;
 }

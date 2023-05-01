@@ -11,12 +11,12 @@ export default function Featured({featuredProduct}) {
     return (
         <div id="featured">
             <h1>iPhone 14 Pro</h1>
-            <h3>Pro. Beyond.</h3>
-            <div>
-                <Link href={'/products/'+featuredProduct._id}><button>Learn More</button></Link>
-                <button onClick={addFeaturedToCart}>Buy</button>
+            <h3 id="featured-h3">Pro. Beyond.</h3>
+            <div id="featured-buttons">
+                <Link href={'/products/'+featuredProduct._id}><button>Learn More &gt;</button></Link>
+                <button onClick={addFeaturedToCart}>Buy &gt;</button>
             </div>
-            <img id="img" src="https://hmjk99-next-ecommerce.s3.amazonaws.com/1682641010093.png"/>
+            <img id="img" src="/hero__cj6i78tzkp8i_large.jpg"/>
         </div>
         
     )
