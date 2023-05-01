@@ -9,14 +9,14 @@ export default function Featured({featuredProduct}) {
     }
 
     return (
-        <div id="featured">
+        <div className="home">
             <h1>iPhone 14 Pro</h1>
-            <h3 id="featured-h3">Pro. Beyond.</h3>
-            <div id="featured-buttons">
+            <h3 className="home-h3">Pro. Beyond.</h3>
+            <div className="home-buttons">
                 <Link href={'/products/'+featuredProduct._id}><button>Learn More &gt;</button></Link>
                 <button onClick={addFeaturedToCart}>Buy &gt;</button>
             </div>
-            <img id="img" src="/hero__cj6i78tzkp8i_large.jpg"/>
+            <img className="home-img" src="/hero__cj6i78tzkp8i_large.jpg"/>
         </div>
         
     )
