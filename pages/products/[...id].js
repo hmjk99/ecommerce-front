@@ -10,10 +10,10 @@ export default function SingleProduct({product}) {
     return (
         <>
         <Header/>
-        <div>
-            <div>
+        <div className="show-page">
+            <div className="show-left">
                 <h1>{product.title}</h1>
-                <img id="img" src={activeImage}/>
+                <img className="show-img" src={activeImage}/>
                 <div className="gallery">
                     {product.images.map(image => (
                         <div onClick={()=> setActiveImage(image)} className="gallery-button">
@@ -22,7 +22,7 @@ export default function SingleProduct({product}) {
                     ))}
                 </div>
             </div>
-            <div>
+            <div className="show-right">
                 <p>{product.description}</p>
                 <ul>
                     {Object.entries(product.properties).map(([key, value]) => (
@@ -31,8 +31,8 @@ export default function SingleProduct({product}) {
                     </li>
                     ))}
                 </ul>
-                <h5>${product.price}</h5>
-                <button onClick={()=> addProducts(product._id)}>Buy</button>
+                <h2>${product.price}</h2>
+                <button className="show-button" onClick={()=> addProducts(product._id)}>Buy</button>
             </div>
         </div>
         </>

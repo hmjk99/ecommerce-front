@@ -1,20 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
-.gallery-img{
-  max-width: 100%;
-  max-height: 100%
-}
-.gallery{
-  display: flex;
-  gap: 10px;
-  flex-grow: 0;
-  margin: 10px
-}
-.gallery-button{
-  border: 1px solid gray;
-  height: 40px;
-  padding: 2px;
-  cursor: pointer;
-}
+
 header{
   background-color: rgb(79, 79, 79);
   display: flex;
@@ -149,6 +134,67 @@ h1{
 .products-button button{
   background-color: rgb(49, 105, 211);
   color: white;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 20px;
+  font-size: 1rem;
+}
+/* ================= iphone page ============= */
+.iphone-img{
+  object-fit: cover;
+}
+/* ================= show page ============= */
+.show-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.show-left, .show-right{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem
+}
+.show-right{
+  width: 24rem;
+  height: 40rem;
+}
+.show-right p, li {
+  font-size: 1.2rem;
+}
+.show-img{
+  width: 40rem;
+  height: 27rem;
+  object-fit: contain;
+}
+.gallery-img{
+  max-width: 100%;
+  max-height: 100%
+}
+.gallery{
+  display: flex;
+  gap: 10px;
+  flex-grow: 0;
+  margin: 10px
+}
+.gallery-button{
+  border: 1px solid gray;
+  height: 5rem;
+  padding: 2px;
+  cursor: pointer;
+}
+.show-button{
+  background-color: rgb(49, 105, 211);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  border: none;
+  font-size: 1.1rem;
+}
+.show-button:hover{
+  cursor: pointer;
+  background-color: white;
+  color: rgb(49, 105, 211);
+  text-decoration: underline;
+
 }

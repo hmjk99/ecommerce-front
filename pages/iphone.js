@@ -10,20 +10,23 @@ export default function Iphone({products}) {
     const {addProducts} = useContext(CartContext)
     return (
         <>
-        <Header/>
-        {products.map(product => (
-            <div>
-                <div>
-                    <h2>{product.title}</h2>
-                    <h5>${product.price}</h5>
-                    <Link href={'/products/'+product._id}><button>Learn More</button></Link>
-                    <button onClick={()=> addProducts(product._id)}>Buy</button>
-                </div>
-                <div>
-                    <img id="img" src={product.images[0]}/>
+            <Header/>
+            <div id="all-products-page">
+                <h1>iPhone</h1>
+                <div id="all-products">
+                    {products.length > 0 && products.map(product=> (
+                        <div className="indv-product">
+                            <h2>{product.title}</h2>
+                            <img className="product-page-img iphone-img" src={product.images[0]}/>
+                            <h4>${product.price}</h4>
+                            <div className="home-buttons products-button">
+                                <Link href={'/products/'+product._id}><button>Learn More &gt;</button></Link>
+                                <button onClick={()=> addProducts(product._id)}>Buy &gt;</button>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
-        ))}
         </>
     )
 }
