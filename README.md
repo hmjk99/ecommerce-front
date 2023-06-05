@@ -1,38 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Pineapple_Front
 
-First, run the development server:
+Pineapple-Front is an Apple clone ecommerce website using the data from the [Pineapple-Admin website](https://ecommerce-admin-hmjk99.vercel.app/). The application lets users view, add to cart, and purchase products through Stripe. The application was created using Next.js and styled with plain CSS.
+## Features
+
+- Renders data fetched from MongoDB uploaded from admin panel.
+- Renders product depedning on category.
+- Add to cart function.
+- Purchase product through Stripe.
+- Dynamic cart functionality (adding, deleting, calculating total)
+- Single product page
+
+## Demo
+
+Live link: https://ecommerce-front-hmjk99.vercel.app/
+
+![Alt Text](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWIzZGYyOGM5MWQ1YjdhYWY3ZTg2MmQzYWI3YzU1ZjcyODcyYzU5MSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/ygLyQ0MdPCm74oGlHr/giphy.gif)
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+  git clone https://github.com/hmjk99/pineapple-front.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the project directory
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+  cd u_tube
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Install dependencies
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+  npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Start the server
 
-## Learn More
+```bash
+  npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Related
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Here are some related projects
 
-## Deploy on Vercel
+- [Pineapple_admin](https://github.com/hmjk99/pineapple-admin)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
