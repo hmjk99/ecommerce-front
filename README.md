@@ -28,7 +28,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd u_tube
+  cd pineapple-front
 ```
 
 Install dependencies
