@@ -5,7 +5,7 @@ Pineapple-Front is an Apple clone ecommerce website using the data from the [Pin
 ## Features
 
 - Renders data fetched from MongoDB uploaded from admin panel.
-- Renders product depedning on category.
+- Renders product depending on category.
 - Add to cart function.
 - Purchase product through Stripe.
 - Dynamic cart functionality (adding, deleting, calculating total)
